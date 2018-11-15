@@ -4,6 +4,8 @@ import java.net.URL;
 import java.util.concurrent.TimeUnit;
 import java.net.MalformedURLException;
 
+import org.openqa.selenium.support.ui.WebDriverWait;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.remote.DesiredCapabilities;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -30,6 +32,12 @@ public class BaseStep {
       driver.manage().timeouts().implicitlyWait(new Long(10), TimeUnit.SECONDS);
     }
     return driver;
+  }
+
+  public AndroidElement waitForElement(AndroidElement element){
+    WebDriverWait wait =  new WebDriverWait(driver, 20);
+    wait.until(ExpectedConditions.visibilityOf(element));
+    return element;
   }
 
   DesiredCapabilities getCapabilities(){
