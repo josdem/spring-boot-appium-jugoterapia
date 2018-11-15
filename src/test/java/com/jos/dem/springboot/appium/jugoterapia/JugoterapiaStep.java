@@ -20,6 +20,8 @@ import cucumber.api.java.en.And;
 import cucumber.api.java.en.When;
 import cucumber.api.java.en.Then;
 
+import org.springframework.beans.factory.annotation.Value;
+
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.android.AndroidElement;
 import io.appium.java_client.android.nativekey.KeyEvent;
@@ -27,9 +29,11 @@ import io.appium.java_client.android.nativekey.AndroidKey;
 
 public class JugoterapiaStep extends BaseStep {
 
+  @Value("${appium.sleep}")
+  private Long timeToSleep;
+
   private AndroidElement textView;
   private AndroidDriver<AndroidElement> driver;
-  private Long timeToSleep = new Long(1);
 
   private Logger log = Logger.getLogger(this.getClass().getName());
 
