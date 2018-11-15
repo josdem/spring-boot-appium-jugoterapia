@@ -26,6 +26,8 @@ public class BaseStep {
   private String appiumServer;
   @Value("${appium.wait}")
   private Long appiumWait;
+  @Value("${appium.timeout}")
+  private Long appiumTimeout;
 
   @Autowired
   private AppiumService appiumService;
@@ -40,7 +42,7 @@ public class BaseStep {
   }
 
   public AndroidElement waitForElement(AndroidElement element){
-    WebDriverWait wait =  new WebDriverWait(driver, 20);
+    WebDriverWait wait =  new WebDriverWait(driver, appiumTimeout);
     wait.until(ExpectedConditions.visibilityOf(element));
     return element;
   }
