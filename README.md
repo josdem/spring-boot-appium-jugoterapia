@@ -18,7 +18,7 @@ mvn test
 #### Read this as reference
 
 * http://josdem.io/techtalk/android/appium_automation
-* http://josdem.io/techtalk/android/appium_cucumber_junit5/
+* https://josdem.io/techtalk/spring/spring_boot_appium_cucumber/
 
 **Note:** This project uses [Jugoterapia](https://play.google.com/store/apps/details?id=com.jugoterapia.josdem) project as an Android application for testing, know more about this project here:
 
