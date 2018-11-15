@@ -27,7 +27,7 @@ import io.appium.java_client.android.AndroidElement;
 import io.appium.java_client.android.nativekey.KeyEvent;
 import io.appium.java_client.android.nativekey.AndroidKey;
 
-public class JugoterapiaStep extends BaseStep {
+public class JugoterapiaTest extends BaseTest {
 
   @Value("${appium.sleep}")
   private Long timeToSleep;

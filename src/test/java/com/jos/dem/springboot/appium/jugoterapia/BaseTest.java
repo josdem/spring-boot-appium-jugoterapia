@@ -20,7 +20,7 @@ import com.jos.dem.springboot.appium.jugoterapia.service.AppiumService;
 
 @ContextConfiguration(classes = AppiumJugoterapiaApplication.class)
 @WebAppConfiguration
-public class BaseStep {
+public class BaseTest {
 
   @Value("${appium.server}")
   private String appiumServer;
