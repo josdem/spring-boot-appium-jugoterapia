@@ -23,7 +23,6 @@ public class BaseStep {
 
   @Autowired
   private AppiumService appiumService;
-
   private AndroidDriver<AndroidElement> driver;
 
   public AndroidDriver<AndroidElement> getDriver() throws MalformedURLException {
