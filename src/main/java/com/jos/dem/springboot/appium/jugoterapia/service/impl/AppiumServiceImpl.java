@@ -30,7 +30,7 @@ public class AppiumServiceImpl implements AppiumService {
   public void setup(){
     capabilities.setCapability("deviceName", deviceName);
     capabilities.setCapability(CapabilityType.VERSION, deviceVersion);
-    capabilities.setCapability("platformName", devicePlatform));
+    capabilities.setCapability("platformName", devicePlatform);
     capabilities.setCapability("appPackage", applicationPackage);
     capabilities.setCapability("appActivity", applicationActivity);
   }
