@@ -79,7 +79,7 @@
       <scope>test</scope>
     </dependency>
     <dependency>
-      <groupId>com.github.appium</groupId>
+      <groupId>io.appium</groupId>
       <artifactId>java-client</artifactId>
       <version>${appium.java.client}</version>
     </dependency>
