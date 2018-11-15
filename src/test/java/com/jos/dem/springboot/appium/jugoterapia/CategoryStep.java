@@ -1,5 +1,6 @@
 package com.jos.dem.springboot.appium.jugoterapia;
 
+import static org.junit.jupiter.api.Assertions.assertNotNull;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 import java.util.Date;
@@ -27,6 +28,7 @@ public class CategoryStep extends BaseStep {
   public void shouldBeAbleToSeeCapabilities() throws Exception {
     log.info("Running: I should be able to see capabilities at " + new Date().getTime());
     assertEquals("Pixel 2", capabilities.getCapability("deviceName"));
+    assertNotNull(getDriver());
   }
 
 }
